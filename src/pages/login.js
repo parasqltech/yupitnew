@@ -10,7 +10,7 @@ import logo from '../img/logo.png'
 import SimpleReactValidator from 'simple-react-validator';
 import axios from 'axios';
 import { Redirect } from 'react-router'
-import Cookies from 'universal-cookie';
+import cookie from "react-cookie";
 const cookies = new Cookies();
 
 const Loginslider = Loadable({
@@ -38,7 +38,7 @@ class login extends  React.Component {
 			redirect: false
 			
 		} 
-    
+    this.state = {Userid: cookie.load("Userid")};
 		this.handleChange = this.handleChange.bind(this);
 		this.loginButton = this.loginButton.bind(this);
 		this.sendOtp = this.sendOtp.bind(this);
@@ -82,12 +82,13 @@ class login extends  React.Component {
 	    		Resdata: response.data.ResponseData,
 	    		login: true,
 			});
+			cookie.save("Userid", true, {path: "/"});
 			console.log(this.state.Resdata);
-			cookies.set('Userid', this.state.Resdata.id);
-			cookies.set('Phone', this.state.Resdata.Phone);
-			cookies.set('IsLocked',this.state.Resdata.IsLocked);
-			cookies.set('Promocode',this.state.Resdata.PromoCode);
-			console.log(cookies.get('IsLocked')); 
+// 			cookies.set('Userid', this.state.Resdata.id);
+// 			cookies.set('Phone', this.state.Resdata.Phone);
+// 			cookies.set('IsLocked',this.state.Resdata.IsLocked);
+// 			cookies.set('Promocode',this.state.Resdata.PromoCode);
+// 			console.log(cookies.get('IsLocked')); 
 			console.log(cookies.get('Userid'));
 // 			window.location.href = '/';
 	    })
