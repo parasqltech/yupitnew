@@ -87,9 +87,9 @@ class login extends  React.Component {
 			cookies.set('Phone', this.state.Resdata.Phone);
 			cookies.set('IsLocked',this.state.Resdata.IsLocked);
 			cookies.set('Promocode',this.state.Resdata.PromoCode);
-			// console.log(cookies.get('IsLocked')); 
-			// console.log(cookies.get('Userid'));
-			window.location.href = '/';
+			console.log(cookies.get('IsLocked')); 
+			console.log(cookies.get('Userid'));
+// 			window.location.href = '/';
 	    })
 	    .catch(error => console.log(error));
 	    }else {
