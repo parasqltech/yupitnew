@@ -11,7 +11,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 const uid = cookies.get('Userid');
-
+console.log(uid);
 if(cookies.get('ImgProfile') === undefined){
    var profileimg = Profile;
 }else{
