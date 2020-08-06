@@ -83,10 +83,10 @@ class login extends  React.Component {
 	    		login: true,
 			});
 			console.log(this.state.Resdata);
-			cookies.set('Userid', this.state.Resdata.id, { path: '/'});
-			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
-			cookies.set('IsLocked',this.state.Resdata.IsLocked, { path: '/' });
-			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
+			cookies.set('Userid', this.state.Resdata.id);
+			cookies.set('Phone', this.state.Resdata.Phone);
+			cookies.set('IsLocked',this.state.Resdata.IsLocked);
+			cookies.set('Promocode',this.state.Resdata.PromoCode);
 			console.log(cookies.get('IsLocked')); 
 			console.log(cookies.get('Userid'));
 // 			window.location.href = '/';
