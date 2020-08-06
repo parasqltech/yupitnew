@@ -11,7 +11,7 @@ import SimpleReactValidator from 'simple-react-validator';
 import axios from 'axios';
 import { Redirect } from 'react-router'
 import Cookies from 'universal-cookie';
-const cookies = new Cookies();
+const cookies = new Cookies(req.headers.cookie);
 
 const Loginslider = Loadable({
     loader: () => import("../components/login/mainSlider"),
