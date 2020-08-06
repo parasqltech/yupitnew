@@ -11,7 +11,7 @@ import SimpleReactValidator from 'simple-react-validator';
 import axios from 'axios';
 import { Redirect } from 'react-router'
 import Cookies from 'universal-cookie';
-const cookies = new Cookies(req.headers.cookie);
+const cookies = new Cookies();
 
 const Loginslider = Loadable({
     loader: () => import("../components/login/mainSlider"),
@@ -83,10 +83,10 @@ class login extends  React.Component {
 	    		login: true,
 			});
 			console.log(this.state.Resdata);
-			cookies.set('Userid', this.state.Resdata.id);
-			cookies.set('Phone', this.state.Resdata.Phone);
-			cookies.set('IsLocked',this.state.Resdata.IsLocked);
-			cookies.set('Promocode',this.state.Resdata.PromoCode);
+			cookies.set('Userid', this.state.Resdata.id, { path: '/'});
+			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
+			cookies.set('IsLocked',this.state.Resdata.IsLocked, { path: '/' });
+			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
 			console.log(cookies.get('IsLocked')); 
 			console.log(cookies.get('Userid'));
 // 			window.location.href = '/';
