@@ -41,7 +41,8 @@ const Layout = ({ children}) => (
             }}
     </Location>
     <>{children} </>
-    <Footer></Footer>
+   
+    {((location.pathname === "/login")) ? ("") :(<Footer/>)}
 	<ScrollUpButton />
   </>
 );
