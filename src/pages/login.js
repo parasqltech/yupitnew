@@ -153,7 +153,7 @@ class login extends  React.Component {
 												<div className="text-center mb-4"><img src={logo} width="150px" className="img-fluid"/></div>
 												<label className="section-heading-2 font-weight-semi-bold d-block mb-4  text-center">Sign in to YupiT</label>
 												<FormControl maxLength="10" name="mobileno" className="mb-3" inputMode='numeric'  value={this.state.mobileno}   placeholder="Enter your mobile number" onChange={this.handleChange} />
-												<span Class="text-danger mb-2 d-block">{this.state.Msg}</span>
+								 			<span Class="text-danger mb-2 d-block">{this.state.Msg}</span>
 												<Button variant="primary btn-block mb-4" onClick={this.sendOtp} className="visible font-weight-semi-bold"> Request Sign In Code</Button>
 											</Col>
 										</Row>
