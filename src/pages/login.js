@@ -82,7 +82,7 @@ class login extends  React.Component {
 	    		Resdata: response.data.ResponseData,
 	    		login: true,
 			});
-			sessionStorage.setItem('Resdata', this.state.Resdata);
+			localStorage.setItem('Userid',this.state.Resdata.id);
 			console.log(this.state.Resdata);
 // 			cookies.set('Userid', this.state.Resdata.id, { path: '/' });
 // 			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
@@ -90,8 +90,8 @@ class login extends  React.Component {
 // 			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
 // 			console.log(cookies.get('IsLocked')); 
 // 			console.log(cookies.get('Userid'));
-			sessionStorage.getItem('Resdata');
-			window.location.href = '/';
+			localStorage.getItem('Userid');
+// 			window.location.href = '/';
 	    })
 	    .catch(error => console.log(error));
 	    }else {
