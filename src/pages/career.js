@@ -12,7 +12,8 @@ import WhyChooseUs from '../components/Career/WhyChooseUs';
 import Team from '../components/common/Team';
 import ContactJobApply from '../components/Contact/ContactJobApply';
 import Loadable from 'react-loadable';
-
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const GalleryComponent = Loadable({
     loader: () => import("../components/Career/Gallery"),
