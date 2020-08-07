@@ -21,9 +21,6 @@ import HomeMainSlider from '../components/Home/HomeMainSlider'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
-// sessionStorage.getItem('Resdata');
-
-console.log(localStorage.getItem('Userid'));
 
 const HomeBlog = Loadable({
     loader: () => import("../components/Home/HomeBlog"),
