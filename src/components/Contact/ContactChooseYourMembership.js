@@ -37,6 +37,7 @@ class ContactChooseYourMembership extends Component {
     if(uid === undefined){
       axios.get('https://yupit.io/staging/api/mswl').then(res => {
       this.setState({RessubData: res.data.ResponseData});
+      })
     }else{
       axios.get('https://yupit.io/staging/api/membership/'+uid).then(res => {
       this.setState({RessubData: res.data.ResponseData});
