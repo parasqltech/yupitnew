@@ -72,14 +72,14 @@ class OfferSection extends Component {
                     <OwlCarousel key={`carousel_${this.state.ResData.length}`} className="owl-theme mt-2 mb-2"  {...options} > 
                     { Offerdata && Offerdata.map( prop => {return (
                         <div className="p-2">
-                          <Link to={"/offer/"+prop.URL}>
+                          <Link className="p-0" to={"/offer/"+prop.URL}>
                             <Card className="offer-card p-0">
                             <Card.Header className="p-0">
-                                <img src={prop.Image} className="img-fluid w-100" alt/>
+                                <img src={resturantThumbnial} className="img-fluid w-100" alt/>
                             
                                 <div className="offerHeader Getmealwithdrink">
                                     <div className="offerIcon">
-                                        <i><img src={timer} className="img-fluid" alt/></i>
+                                        <i><img src={prop.Image} className="img-fluid" alt/></i>
                                     </div>
                                     <div className="offerName">{prop.Name}</div>
                                 </div>

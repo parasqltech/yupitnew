@@ -148,11 +148,18 @@ if (this.validator.allValid()) {
                                 <h1 className="section-heading font-weight-bold  mb-3">Delicious!!</h1>
                                 <p className="section-heading-3 mb-3">Find your favourite venue anytime, Anywhere</p>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <div className="input-group">
+                                    <div className="d-flex ">
+                                      <div className="mr-3">
                                       <input type="text" rows="2" name="headersearch" className="form-control " onChange={this.handleInputChange} placeholder="Search with location, food or restaurant"/>
-                                      <button type="submit" name="search" className="btn btn-default " variant="default">Search</button> 
+                                    
+                                      {this.validator.message('headersearch', this.state.headersearch, 'required|alpha')}
+                                      </div>
+                                      <div>
+                                     <button type="submit" name="search" className="btn btn-default h-auto" variant="default">Search</button> 
                                     </div>
-					{this.validator.message('headersearch', this.state.headersearch, 'required|alpha')}
+                                    </div>
+                                    
+				
                                 </Form>
                             </Col>
                         </Row>
@@ -167,7 +174,7 @@ if (this.validator.allValid()) {
                                     { res && res.map(prop => {return (  
                                       <>  
                                           <Col  xl={4}  lg={4} md="4"  sm={6}>
-                                             <Link className="nav-link" to={"/restaurant/"+prop.URL}>
+                                             <Link className="nav-link p-0" to={"/restaurant/"+prop.URL}>
                                              <Card className="resturant-card p-2 ">
                                              <Card.Header className="p-0 border-0">
                                                <div className="resturant-card-image">

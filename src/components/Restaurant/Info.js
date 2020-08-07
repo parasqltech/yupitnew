@@ -104,7 +104,7 @@ class Info extends Component {
                                        </Col>
                                        <Col md={6} sm={7}>
                                        <Row>
-                                       <Col xl={8} lg={10}>
+                                       <Col xl={8} lg={10} className="pr-0">
                                             <h3 className="section-heading-3 font-weight-semi-bold">Opening Hours</h3>
                                             <ul className="WorkingHourList">
                                                 <li className="d-flex">
