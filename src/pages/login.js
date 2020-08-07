@@ -81,7 +81,9 @@ class login extends  React.Component {
 	    		ResCode: response.data.ResponseCode,
 	    		Resdata: response.data.ResponseData,
 	    		login: true,
-			});
+			}, () => {
+			    sessionStorage.setItem('Resdata', this.state.Resdata)
+			  });
 			console.log(this.state.Resdata);
 			cookies.set('Userid', this.state.Resdata.id, { path: '/' });
 			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
