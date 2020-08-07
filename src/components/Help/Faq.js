@@ -10,16 +10,16 @@ constructor(props) {
      }
 	handleToggle = (id) => {
 		
-        document.querySelectorAll('.card:not(.id'+id+')').forEach(function(button) {	
-			if(!button.classList.contains(".id"+id)){
+        document.querySelectorAll('.card:not(.faq'+id+')').forEach(function(button) {	
+			if(!button.classList.contains(".faq"+id)){
 				button.classList.remove('active');
 			}
 		});
 		
-		if (document.querySelector(".id"+id).classList.contains('active')) {
-		  document.querySelector(".id"+id).classList.remove('active');
+		if (document.querySelector(".faq"+id).classList.contains('active')) {
+		  document.querySelector(".faq"+id).classList.remove('active');
 		} else {
-		  document.querySelector(".id"+id).classList.add('active');
+		  document.querySelector(".faq"+id).classList.add('active');
 		}
 		
 		
@@ -42,7 +42,7 @@ constructor(props) {
                                   (prop1,i) =>{
                                     return(
                                      <>
-                                  <Card className="p-0 mb-4" className={"p-0 mb-4 id"+i} >
+                                  <Card className="p-0 mb-4" className={"p-0 mb-4 faq"+i} >
                                     <Card.Header  className="border-0" >
                                       <Accordion.Toggle onClick={() => {this.handleToggle(i)}} className="label-text border-0 text-dark mb-0 "   as={Card.Title} eventKey={i}>
                                         <h3 className="label-text-2 text-dark mb-0" >{prop1.question}</h3><span className="accrodian-icon"><i className="fa fa-plus"></i></span>

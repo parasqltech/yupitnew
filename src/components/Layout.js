@@ -32,7 +32,11 @@ const Layout = ({ children}) => (
             {({ location }) => {
             
               return <>
-              {((location.pathname === "/faq")||(location.pathname === "/terms-and-conditions")||(location.pathname === "/privacy-policy")) ? (<SubHeader/>) :(<Header/>)}
+              
+              {((location.pathname === "/login")) ? ('') :(<>{((location.pathname === "/faq")||(location.pathname === "/terms-and-conditions")||(location.pathname === "/privacy-policy")) ? (<SubHeader/>) :(<Header/>)}</>)}
+              
+              
+              
               </>
             }}
     </Location>
