@@ -84,16 +84,15 @@ class login extends  React.Component {
 	    		Resdata: response.data.ResponseData,
 	    		login: true,
 			});
-			localStorage.setItem('Userid',this.state.Resdata.id);
+
 			console.log(this.state.Resdata);
-// 			cookies.set('Userid', this.state.Resdata.id, { path: '/' });
-// 			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
-// 			cookies.set('IsLocked',this.state.Resdata.IsLocked, { path: '/' });
-// 			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
-// 			console.log(cookies.get('IsLocked')); 
-// 			console.log(cookies.get('Userid'));
-			console.log(localStorage.getItem('Userid'));
-// 			window.location.href = '/';
+			cookies.set('Userid', this.state.Resdata.id, { path: '/' });
+			cookies.set('Phone', this.state.Resdata.Phone, { path: '/' });
+			cookies.set('IsLocked',this.state.Resdata.IsLocked, { path: '/' });
+			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
+			console.log(cookies.get('IsLocked')); 
+			console.log(cookies.get('Userid'));
+			window.location.href = '/';
 	    })
 	    .catch(error => console.log(error));
 	    }else {
