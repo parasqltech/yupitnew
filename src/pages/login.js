@@ -83,10 +83,10 @@ class login extends  React.Component {
 	    		login: true,
 			});
 			console.log(this.state.Resdata);
-			cookies.set('Userid', this.state.Resdata.id);
-			cookies.set('Phone', this.state.Resdata.Phone);
-			cookies.set('IsLocked',this.state.Resdata.IsLocked);
-			cookies.set('Promocode',this.state.Resdata.PromoCode);
+			cookies.set('Userid', this.state.Resdata.id, { path: 'https://5f2be36f49bf170008a84ee6--affectionate-dijkstra-5598fe.netlify.app/' });
+			cookies.set('Phone', this.state.Resdata.Phone, { path: 'https://5f2be36f49bf170008a84ee6--affectionate-dijkstra-5598fe.netlify.app/' });
+			cookies.set('IsLocked',this.state.Resdata.IsLocked, { path: 'https://5f2be36f49bf170008a84ee6--affectionate-dijkstra-5598fe.netlify.app/' });
+			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: 'https://5f2be36f49bf170008a84ee6--affectionate-dijkstra-5598fe.netlify.app/' });
 			console.log(cookies.get('IsLocked')); 
 			console.log(cookies.get('Userid'));
 // 			window.location.href = '/';
