@@ -90,7 +90,7 @@ class login extends  React.Component {
 // 			cookies.set('Promocode',this.state.Resdata.PromoCode, { path: '/' });
 // 			console.log(cookies.get('IsLocked')); 
 // 			console.log(cookies.get('Userid'));
-			localStorage.getItem('Userid');
+			console.log(localStorage.getItem('Userid'));
 // 			window.location.href = '/';
 	    })
 	    .catch(error => console.log(error));
