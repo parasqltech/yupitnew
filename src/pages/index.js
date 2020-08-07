@@ -19,6 +19,8 @@ import ContactTextme from '../components/Contact/ContactTextme'
 import ContactEmailme from '../components/Contact/ContactEmailme'
 import HomeMainSlider from '../components/Home/HomeMainSlider'
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const HomeBlog = Loadable({
     loader: () => import("../components/Home/HomeBlog"),
