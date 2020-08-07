@@ -35,7 +35,8 @@ class ContactChooseYourMembership extends Component {
  
   componentWillMount(){
     if(uid === undefined){
-      this.setState({RessubData: []});
+      axios.get('https://yupit.io/staging/api/mswl').then(res => {
+      this.setState({RessubData: res.data.ResponseData});
     }else{
       axios.get('https://yupit.io/staging/api/membership/'+uid).then(res => {
       this.setState({RessubData: res.data.ResponseData});
@@ -72,59 +73,7 @@ class ContactChooseYourMembership extends Component {
         }
         return (
             <>
-            {(Islock == 1 )?(""):((uid == undefined)?(<>
-               <section className="suscription-section-2">
-                    <Container>
-                         
-                        <Row className="justify-content-center">
-                            <Col lg={11}>
-                                <h2 className="section-heading text-center">Choose Your Membership</h2>
-                                <p className="label-text-2 text-center  mb-4  pb-2">Keep availing membership privileges by choosing one of these plans</p>
-                            </Col> 
-                        </Row>
-                        <Form>
-                            <Row>
-                                <Col sm={6}>
-                                      
-
-                                        <label className="suscriptionPlan-custom-radio month3">
-                                            <input type="radio" className=""  value="3month" name="suscriptionPlan"/>
-                                            <div className="suscriptioBox" >
-                                                    <span className="timePeriod">3 Month</span>
-                                                   
-                                                    <div className="d-block">
-                                                        <div className="suscriptionPrice ">$10.00</div>
-                                                        <div className="offerName">Tri-monthly pack</div>
-                                                        <p className="label-text"> Subscription for 3/months</p>
-                                                    </div> 
-                                            </div>
-                                        </label>
-                                </Col>  
-                                <Col sm={6}>
-                                            <label className="suscriptionPlan-custom-radio month12">
-                                                <input type="radio" className=""  name="suscriptionPlan"/>
-                                                <div className="suscriptioBox" >
-                                                    <span className="timePeriod">12 Month</span> 
-                                                    <div className="d-block">
-                                                        <div className="suscriptionPrice ">$70.00</div>
-                                                        <div className="offerName">Best price pack</div>     
-                                                        <p className="label-text"> Subscribe for a year and save $(amount)</p>
-                                                   
-                                                    </div>   
-                                                  
-                                                </div>
-                                            </label>
-                                       
-                                </Col>   
-                                <Col lg={12} className="text-center">
-                                    <Button variant="default  mt-sm-4 mt-0" onClick={this.handleSubmit} as="submit">Buy membership plan</Button>
-                                </Col>  
-                            </Row>
-                        </Form>
-                        
-                    </Container>
-                </section> 
-            </>):(<><section className="suscription-section-2">
+            {(Islock == 1 )?(""):(<><section className="suscription-section-2">
                     <Container>
                          
                         <Row className="justify-content-center">
@@ -185,7 +134,7 @@ class ContactChooseYourMembership extends Component {
                         </Form>
                         
                     </Container>
-                </section></>))}
+                </section></>)}
             </>
         );
     }
