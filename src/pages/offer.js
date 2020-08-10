@@ -155,8 +155,8 @@ class OfferPage extends Component {
                                             <li>
                                                 <span className="popoverIconMain"><img src={resturantSpecialIcon1} className="img-fluid"/></span>
                                                 <div className="popoverBox">
-                                                    <p className="popoverTitle mb-2">Contact</p>
-                                                    <p>{prop.ContactNo}</p>
+                                                    <p className="popoverTitle mb-2">Service</p>
+                                                    <p>{prop.Service}</p>
                                                 </div>
                                             </li>
                                             <li>

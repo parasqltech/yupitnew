@@ -185,7 +185,7 @@ class RestaurantDetailPage extends Component {
 					                        </div>
 					                    </Card.Header>
 					                    <Card.Body className="p-0">
-					                        <p className="offerDetailText">{prop.OfferDesc}</p>
+					                        <p className="offerDetailText">{prop.OfferName}</p>
 					                        <p className="label-text"> <AiOutlineClockCircle className="mr-1"/> <span className="mr-1"> {prop.OfferString}</span> <GiOpenedFoodCan  className="mr-1 d-none"/><span className="d-none"> Dinner</span></p>
 					                        <span className="shareButton d-none"><AiOutlineShareAlt/></span>
 					                    </Card.Body>
