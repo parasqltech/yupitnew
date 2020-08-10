@@ -168,7 +168,7 @@ class RestaurantDetailPage extends Component {
             <Row >
                 <Col xl={9} lg={9}>
                 <Tabs defaultActiveKey="offer"  id="uncontrolled-tab-example">
-                        <Tab eventKey="offer" title={<><FaPercent className="mr-2"/>Offer</>}>
+                        <Tab eventKey="offer" title={<><FaPercent className="mr-2"/>Reward</>}>
                         <Row>
                             {
 			                    restaurantData.AllData[3].details && restaurantData.AllData[3].details.map(prop => {return (    
