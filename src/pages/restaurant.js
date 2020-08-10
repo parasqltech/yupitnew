@@ -204,8 +204,7 @@ if (this.validator.allValid()) {
                                                         <p><span>Friday:{prop.AllData[0].Timings.Friday}</span></p>
                                                         <p><span>Saturday:{prop.AllData[0].Timings.Saturday}</span></p>
                                                         <p><span>Sunday:{prop.AllData[0].Timings.Sunday}</span></p>
-                                                        
-
+                                                    
                                                      </div>
                                                   </li>
                                                 </ul>

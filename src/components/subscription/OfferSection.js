@@ -64,6 +64,7 @@ class OfferSection extends Component {
         // console.log(this.state.ResData);
         const Offerdata = this.state.ResData;
         console.log(Offerdata);
+        
         return (
             <section className="offerSection">
                 <Container>

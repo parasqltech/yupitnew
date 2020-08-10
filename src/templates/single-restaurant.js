@@ -178,7 +178,6 @@ class RestaurantDetailPage extends Component {
 					                    <Card.Header className="p-0">
 					                        <img src={restaurantData.ImageURL} className="img-fluid w-100" alt/>
 					                        <div className="offerHeader Getmealwithdrink">
-					                            
 					                            <div className="offerName">
 					                            {prop.OfferTitle}
 					                            </div>

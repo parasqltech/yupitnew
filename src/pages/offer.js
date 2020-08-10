@@ -160,18 +160,18 @@ class OfferPage extends Component {
                                                 </div>
                                             </li>
                                             <li>
-                                                    <span className="popoverIconMain"><img src={resturantSpecialIcon2} className="img-fluid"/></span>
-                                                    <div className="popoverBox">
-                                                    <p className="popoverTitle mb-2">Time</p>
-                                                    <p><span>Monday:{prop.AllData[0].Timings.Monday}</span></p>
-                                                    <p><span>Tuesday:{prop.AllData[0].Timings.Tuesday}</span></p>
-                                                    <p><span>Wednesday:{prop.AllData[0].Timings.Wednesday}</span></p>
-                                                    <p><span>Thursday:{prop.AllData[0].Timings.Thursday}</span></p>
-                                                    <p><span>Friday:{prop.AllData[0].Timings.Friday}</span></p>
-                                                    <p><span>Saturday:{prop.AllData[0].Timings.Saturday}</span></p>
-                                                    <p><span>Sunday:{prop.AllData[0].Timings.Sunday}</span></p>
-                                                    
-                                                </div>
+                                            <span className="popoverIconMain"><img src={resturantSpecialIcon2} className="img-fluid"/></span>
+                                            <div className="popoverBox">
+                                                <p className="popoverTitle mb-2">Time</p>
+                                                <p><span>Monday:{prop.AllData[0].Timings.Monday}</span></p>
+                                                <p><span>Tuesday:{prop.AllData[0].Timings.Tuesday}</span></p>
+                                                <p><span>Wednesday:{prop.AllData[0].Timings.Wednesday}</span></p>
+                                                <p><span>Thursday:{prop.AllData[0].Timings.Thursday}</span></p>
+                                                <p><span>Friday:{prop.AllData[0].Timings.Friday}</span></p>
+                                                <p><span>Saturday:{prop.AllData[0].Timings.Saturday}</span></p>
+                                                <p><span>Sunday:{prop.AllData[0].Timings.Sunday}</span></p>
+                                                
+                                            </div>
                                             </li>
                                         </ul>
                                         <StarRatings
