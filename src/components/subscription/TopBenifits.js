@@ -39,7 +39,7 @@ const TopBenifits = () => (
           <section className="suscription-top-benifit-section">
                 <div className="container">
                <>
-                    <h2 className="section-heading text-center  ">Why YupiTMax</h2>
+                    <h2 className="section-heading text-center  ">Why YupiT Premium</h2>
                     <p className="sub-heading text-center mb-4">By subscribing to YupiT you will always best value whenever you dine-in or pick up your order</p>
                     <div className="row justify-content-center">
                        

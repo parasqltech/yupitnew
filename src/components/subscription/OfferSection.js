@@ -75,7 +75,7 @@ class OfferSection extends Component {
                           <Link className="p-0" to={"/offer/"+prop.URL}>
                             <Card className="offer-card p-0">
                             <Card.Header className="p-0">
-                                <img src={resturantThumbnial} className="img-fluid w-100" alt/>
+                                <img src={prop.ImageURL} className="img-fluid w-100" alt/>
                             
                                 <div className="offerHeader Getmealwithdrink">
                                     <div className="offerIcon">
@@ -86,8 +86,8 @@ class OfferSection extends Component {
                             </Card.Header>
                             <Card.Body className="p-0">
                                 <p className="offerDetailText">{prop.Desc}</p>
-                                <p className="label-text"> <AiOutlineClockCircle className="mr-1"/> <span className="mr-1"> 20:00 to 22:30</span> <GiOpenedFoodCan  className="mr-1"/><span > Dinner</span></p>
-                                <span className="shareButton"><AiOutlineShareAlt/></span>
+                                <p className="label-text d-none"> <AiOutlineClockCircle className="mr-1 d-none"/> <span className="mr-1 d-none"> 20:00 to 22:30</span> <GiOpenedFoodCan  className="mr-1 d-none"/><span className="d-none"> Dinner</span></p>
+                                <span className="shareButton d-none"><AiOutlineShareAlt/></span>
                             </Card.Body>
                             </Card>
                           </Link>

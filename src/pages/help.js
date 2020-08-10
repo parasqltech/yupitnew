@@ -70,7 +70,7 @@ return(
                                 <Nav.Link onClick={this.tabactiveBtn} data-event-key="Faq" eventKey="Faq">FAQ's</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link onClick={this.tabactiveBtn} data-event-key="YupiTMaxFaq" eventKey="YupiTMaxFaq">YupiTPrime FAQ's</Nav.Link>
+                                <Nav.Link onClick={this.tabactiveBtn} data-event-key="YupiTMaxFaq" eventKey="YupiTMaxFaq">YupiT Premium FAQ's</Nav.Link>
                             </Nav.Item>
 
                             
