@@ -150,7 +150,7 @@ if (this.validator.allValid()) {
                                 <Form onSubmit={this.handleSubmit}>
                                     <div className="d-flex ">
                                       <div className="mr-3">
-                                      <input type="text" rows="2" name="headersearch" className="form-control " onChange={this.handleInputChange} placeholder="Search with location, food or restaurant"/>
+                                      <input type="text" rows="2" name="headersearch" className="form-control " onChange={this.handleInputChange} placeholder="Search restaurants or dishes"/>
                                     
                                       {this.validator.message('headersearch', this.state.headersearch, 'required|alpha')}
                                       </div>
@@ -184,7 +184,7 @@ if (this.validator.allValid()) {
                                                 <img className="img-fluid"  src={prop.LogoURL}/>
                                                </div>
                                                <p className="resturant-name font-weight-semi-bold mb-1">{prop.Name}</p>
-                                               <p className="resturant-details">{prop.Desc}</p>
+                                               <p className="resturant-details">{prop.Desc+"..."}</p>
                                                <ul class="popoverList border-bottom">
                                                   <li>
                                                       <span className="popoverIconMain"><img src={resturantSpecialIcon1} className="img-fluid"/></span>
