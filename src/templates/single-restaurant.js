@@ -185,8 +185,8 @@ class RestaurantDetailPage extends Component {
 					                    </Card.Header>
 					                    <Card.Body className="p-0">
 					                        <p className="offerDetailText">{prop.OfferName}</p>
-                                  {(prop.OfferString === '')?(""):(<><p className="label-text"> <AiOutlineClockCircle className="mr-1"/> <span className="mr-1"> {prop.OfferString}</span></>)}
-					                         <GiOpenedFoodCan  className="mr-1 d-none"/><span className="d-none"> Dinner</span></p>
+                                  {(prop.OfferString === '')?(""):(<><p className="label-text"> <AiOutlineClockCircle className="mr-1"/> <span className="mr-1"> {prop.OfferString}</span><GiOpenedFoodCan  className="mr-1 d-none"/><span className="d-none"> Dinner</span></p></>)}
+					                         
 					                        <span className="shareButton "><AiOutlineShareAlt/></span>
 					                    </Card.Body>
 					                    </Card>
