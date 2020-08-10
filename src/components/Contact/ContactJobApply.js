@@ -77,9 +77,13 @@ class ContactJobApply extends React.Component{
   }
 
   number(e) {
-    this.setState({
-      number: e.target.value
-    });
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === '' || re.test(e.target.value)) {
+      this.setState({
+        number:  e.target.value,
+      });
+    } 
+    
   }
   
   
@@ -109,24 +113,25 @@ class ContactJobApply extends React.Component{
                 <Row>
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">First Name</label>
-                        <FormControl  type="text"  placeholder="First Name"  name="first_name" value={this.state.first_name} onChange={this.setTitle}  required/>
+                        <FormControl  type="text"  placeholder="First Name"  name="first_name" value={this.state.first_name} onChange={this.setTitle}  />
                         {this.validator.message('First Name', this.state.first_name, 'required|alpha')}
                     </Col>
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">Last Name</label>
-                        <FormControl  type="text" placeholder="Last Name"  name="last_name" value={this.state.last_name} onChange={this.setln} required/>
+                        <FormControl  type="text" placeholder="Last Name"  name="last_name" value={this.state.last_name} onChange={this.setln} />
                         
                         {this.validator.message('Last Name', this.state.last_name, 'required|alpha')}
                     </Col>
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">Email</label>
-                        <FormControl  type="email" name="email"   value={this.state.email} onChange={this.email} placeholder="Email" name="email" required />
-                        {this.validator.message('Email', this.state.email, 'required|email')}   
+                        <FormControl  type="email" name="email"   value={this.state.email} onChange={this.email} placeholder="Email" name="email" />
+                        {this.validator.message('Email', this.state.email, 'required|email')}
+                                             
                     </Col>
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">Contact Number</label>
-                        <FormControl  type="text" value={this.state.number} onChange={this.number} name="number" required=""  placeholder="Contact Number" required />
-                        {this.validator.message('Contact Number', this.state.number, 'required|numeric|min:10|max:10')} 
+                        <FormControl  type="text" maxLength="10" minLength="10" inputMode='numeric' value={this.state.number} onChange={this.number} name="number" placeholder="Contact Number" />
+                        {this.validator.message('Contact Number', this.state.number, 'required')} 
                     </Col>
                     
                     
@@ -145,7 +150,7 @@ class ContactJobApply extends React.Component{
                     </Col>
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">Portfolio</label>
-                        <FormControl  value={this.state.portfolio} onChange={this.portfolio} name="Portfolio" required  placeholder="Portfolio"/>
+                        <FormControl  value={this.state.portfolio} onChange={this.portfolio} name="Portfolio" placeholder="Portfolio"/>
                         {this.validator.message('Portfolio', this.state.portfolio, 'required')}
                     </Col>
                     <Col sm={12} className="mb-3" >

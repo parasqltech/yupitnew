@@ -41,12 +41,7 @@ class ContactChooseYourMembership extends Component {
     }else{
       axios.get('https://yupit.io/staging/api/membership/'+uid).then(res => {
       this.setState({RessubData: res.data.ResponseData});
-      this.setState({ResPlan1: res.data.ResponseData.Plans[0]});
-      this.setState({ResPlan2: res.data.ResponseData.Plans[1]});
-      console.log(ResPlan1);
-      console.log(RessubData);
-      console.log(ResPlan2);
-     })
+      })
     }
     
   }
