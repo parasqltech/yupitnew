@@ -64,11 +64,11 @@ class OfferSection extends Component {
         // console.log(this.state.ResData);
         const Offerdata = this.state.ResData;
         console.log(Offerdata);
-        
+
         return (
             <section className="offerSection">
                 <Container>
-                    <h2 className="section-heading text-center font-weight-semi-bold">Our Offer</h2>
+                    <h2 className="section-heading text-center font-weight-semi-bold">Our Rewards</h2>
                 {Offerdata.length && (
                     <OwlCarousel key={`carousel_${this.state.ResData.length}`} className="owl-theme mt-2 mb-2"  {...options} > 
                     { Offerdata && Offerdata.map( prop => {return (
