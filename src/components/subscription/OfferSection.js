@@ -75,7 +75,7 @@ class OfferSection extends Component {
                           <Link className="p-0" to={"/offer/"+prop.URL}>
                             <Card className="offer-card p-0">
                             <Card.Header className="p-0">
-                                <img src={prop.ImageURL} className="img-fluid w-100" alt/>
+                                <img src={resturantThumbnial} className="img-fluid w-100" alt/>
                             
                                 <div className="offerHeader Getmealwithdrink">
                                     <div className="offerIcon">
