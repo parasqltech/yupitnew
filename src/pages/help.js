@@ -51,7 +51,7 @@ componentDidMount() {
 componentDidUpdate(prevProps, prevState) {
     if (prevProps.activeClass !== this.props.activeClass) {
         this.setState({
-            tabactiveClass:this.props.activeClass,
+            tabactiveClass:this.props.activeClass.state.activeClass,
         })
     }
 }
@@ -135,7 +135,7 @@ return(
     return  (
        <>
        
-        <Help1  activeClass={location.state.activeCLass}/>
+        <Help1  activeClass={location}/>
        </>
      )
  }
