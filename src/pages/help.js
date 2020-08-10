@@ -44,7 +44,7 @@ this.setState({
 }
 componentDidMount() {
     this.setState({
-        tabactiveClass:this.props.activeClass,
+        tabactiveClass:this.props.activeClass.state.activeClass,
     })
 }
 
