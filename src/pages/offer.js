@@ -21,11 +21,10 @@ class OfferPage extends Component {
   
   
     componentWillMount() {
-        console.log("im called");
         axios.get(`https://yupit.io/staging/api/restaurantList`)
           .then(res => {
           console.log(res);
-                this.setState({Resdata: res.data.ResponseData.RestList});   
+                this.setState({Resdata: res.data.ResponseData.RestaurantList});   
                 console.log(this.state.Resdata);
         })
     }
@@ -68,6 +67,7 @@ class OfferPage extends Component {
     };
        
        const Offerrest = this.state.Resdata;
+       console.log(Offerrest);
         return (
             <>
                 <Layout>
@@ -163,7 +163,14 @@ class OfferPage extends Component {
                                                     <span className="popoverIconMain"><img src={resturantSpecialIcon2} className="img-fluid"/></span>
                                                     <div className="popoverBox">
                                                     <p className="popoverTitle mb-2">Time</p>
-                                                    <p>{prop.OpenTime_AMPM} To {prop.CloseTime_AMPM}</p>
+                                                    <p><span>Monday:{prop.AllData[0].Timings.Monday}</span></p>
+                                                    <p><span>Tuesday:{prop.AllData[0].Timings.Tuesday}</span></p>
+                                                    <p><span>Wednesday:{prop.AllData[0].Timings.Wednesday}</span></p>
+                                                    <p><span>Thursday:{prop.AllData[0].Timings.Thursday}</span></p>
+                                                    <p><span>Friday:{prop.AllData[0].Timings.Friday}</span></p>
+                                                    <p><span>Saturday:{prop.AllData[0].Timings.Saturday}</span></p>
+                                                    <p><span>Sunday:{prop.AllData[0].Timings.Sunday}</span></p>
+                                                    
                                                 </div>
                                             </li>
                                         </ul>

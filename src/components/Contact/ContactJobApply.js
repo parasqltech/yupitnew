@@ -133,7 +133,7 @@ class ContactJobApply extends React.Component{
                     <Col sm={6} className="mb-3" >
                         <label className="label-text">Resume/Cv</label>
                         <div className="input-group ">
-                        <FormControl  type="text"  className="form-control mr-0" placeholder="Choose File" readOnly=""/>
+                        <FormControl  type="text"  className="form-control mr-0" placeholder="Choose File" readOnly="readonly"/>
                                     <label className="input-group-btn mb-0">
                                 <span className="btn btn-secondary uploadBtn">
                                     Browse<input type="file" value={this.state.resume} onChange={this.resume} accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document" className="d-none" required name="resume"/>     
