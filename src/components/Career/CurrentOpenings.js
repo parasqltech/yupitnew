@@ -222,7 +222,7 @@ render() {
                                                                 <li><FaArrowCircleRight  className="listIcon"/>Own the end-to-end process: build work plans, synthesize relevant data, lead analyses and develop recommendations</li>
                                                             </ul>
                                                             <h2 className="section-heading-3 font-weight-semi-bold mt-4">
-                                                            Requirements::
+                                                            Requirements:
                                                             </h2>
                                                             <ul className="Responsibilities">
                                                                 <li><FaCheckCircle className="listIcon"/>
