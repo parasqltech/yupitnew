@@ -34,7 +34,7 @@ class Legel extends Component {
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body className="p-2 pt-3">
                                 <p className="label-text">We, as YupIt Australia Pty Ltd 29 619 915 614, are committed to respect and protect the privacy of all those users who visit our website (www.yupit.app) and all those website visitors who access our website or services through any mobile application.</p>
-                                <Link to="/privacy-policy" className="ReadMore pl-0 pt-0">Read More</Link>
+                                <Link to={"/privacy-policy"}  state={{ activeCLass: "Privacy Policy" }} className="ReadMore pl-0 pt-0">Read More</Link>
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card.Body>
@@ -51,7 +51,7 @@ class Legel extends Component {
                                 <Accordion.Collapse eventKey="1">
                                     <Card.Body className="p-2 pt-3">
                                         <p className="label-text">Hey there – A warm welcome to our website (YupIT.app) and our applications! Sit, have a sip of beer and read through the terms and conditions regarding your use of our website and on which our partner restaurants offer any of their drinks/meals (the “Drinks/Meals”) listed on our Website to you. </p>
-                                    <Link to="/terms-and-conditions" className="ReadMore pl-0 pt-0">Read More</Link>
+                                    <Link  to={"/terms-and-conditions"}  state={{ activeCLass: "Terms and Conditions" }}  className="ReadMore pl-0 pt-0">Read More</Link>
                                     </Card.Body>
                                 </Accordion.Collapse>
                             </Card.Body>
@@ -68,7 +68,7 @@ class Legel extends Component {
                                 <Accordion.Collapse eventKey="2">
                                     <Card.Body className="p-2 pt-3">
                                         <p className="label-text"></p>
-                                    <Link to="/refund-policy" className="ReadMore  pl-0 pt-0">Read More</Link>
+                                    <Link  to={"/refund-policy"}  state={{ activeCLass: "Refund Policy" }} className="ReadMore  pl-0 pt-0">Read More</Link>
                                     </Card.Body>
                                 </Accordion.Collapse>
                             </Card.Body>

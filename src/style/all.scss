@@ -1107,6 +1107,12 @@ header{
     padding: 5px 0px;
     color:$white-color;
     font-size: 14px;
+    .navbar-brand {
+      vertical-align: middle;
+    } 
+    .section-heading-3{
+      display: inline-block !important;
+    }
     
   }
   .navbar.main-navbar{

@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import { Link, StaticQuery, graphql } from 'gatsby'
 
-import PropTypes from "prop-types"
 import { Container, Navbar, Nav, Button,NavDropdown } from  'react-bootstrap';
 import logo from '../../img/fav-icon.png'
 
@@ -10,11 +9,11 @@ import { Location } from '@reach/router'
 
 
 
-
 class SubHeader extends React.Component {
 	
 	constructor(props) {
 		super(props);
+        console.log(props);
 		this.state = {
           StickyClass: '',
           extarSpaceClass: '',
@@ -23,7 +22,6 @@ class SubHeader extends React.Component {
         } 
 	 
 	}
-
 	
 	componentDidMount() {
 		var url = window.location.href;	
@@ -46,7 +44,7 @@ class SubHeader extends React.Component {
                this.setState({extarSpaceClass: extraSpace	});
 			  });
 	        }
-	
+            
 	render() {
         
       
@@ -81,24 +79,25 @@ class SubHeader extends React.Component {
 
               
                 <Nav className=" navbar main-navbar navbar-expand-md navbar-light d-flex justify-content-between   pl-0 pr-0">
-                     <div className="d-flex justify-content-start align-items-center" >
+                     <div className="d-block  align-items-center" >
                     <Link className="navbar-brand" to="/"><img src={logo} width="40px" className="img-fluid"/></Link>
-                        <span className="section-heading-3  d-inline mb-0 mt-0">
-                            {/* <Location>
+                        <span className="section-heading-3   mb-0 mt-0  ">
+                            
+
+                           <Location>
                                 {({ location }) => {
-                                    let PageName = location.pathname;
-                                return <>
-                                {PageName.replace(/[^\w\s]/gi, ' ')}
-                                </>
+                            
+                                    return <>
+                                        {(location.state.activeCLass)?(location.state.activeCLass):("")}
+                                    </>
                                 }}
-                           </Location> */}
-                           Page Name 1
+                        </Location>
                         </span>
                     </div>
                     <Navbar className="pt-md-0 pt-3" id="help">
                         <ul className="navbar-nav">
                             <Nav.Item>
-                                <Link className="nav-link" to="/help">Help</Link>
+                                <Link className="nav-link" to={"/help"}  state={{ activeCLass: "Legel" }}>Help</Link>
                             </Nav.Item>
                            
                         </ul>
@@ -111,4 +110,6 @@ class SubHeader extends React.Component {
 		)
 	}
 }
+
+
 export default SubHeader;
