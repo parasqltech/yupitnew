@@ -21,16 +21,18 @@ import { Tab, Col, Nav, Row, Card, Accordion, Button } from  'react-bootstrap';
 
 
 
-
-class Help extends React.Component {
-
+class Help1 extends React.Component {
+    
 constructor(props) {
 super(props);
+
+
 this.state = {
     SidebarClass: '',
-    tabactiveClass:'CustomerSupport',
-    
-} 
+    tabactiveClass:'CustomerSupport'
+}   
+
+
 
 this.tabactiveBtn = this.tabactiveBtn.bind(this);
 
@@ -39,18 +41,33 @@ tabactiveBtn = event => {
 this.setState({
     tabactiveClass:event.target.getAttribute('data-event-key'),
 })
-
+}
+componentDidMount() {
+    this.setState({
+        tabactiveClass:this.props.activeClass,
+    })
 }
 
+componentDidUpdate(prevProps, prevState) {
+    if (prevProps.activeClass !== this.props.activeClass) {
+        this.setState({
+            tabactiveClass:this.props.activeClass,
+        })
+    }
+}
+   
+   
 
 render() {
 return(
     <>
         <Layout>
         <> 
+        
         <section className="help-section">
+        
             <div className="container">
-                <Tab.Container activeKey={this.state.tabactiveClass}>
+                <Tab.Container activeKey={(this.state.tabactiveClass)?(this.state.tabactiveClass):("CustomerSupport")}>
                     <Row>
                         <Col sm={12}>
                         <h1 className="section-heading-2 font-weight-bold mb-2">Help &amp; Support</h1>
@@ -111,6 +128,19 @@ return(
 }
 }
 
+
+
+ const Help = ({ location }) => {
+  
+    return  (
+       <>
+       
+        <Help1  activeClass={location.state.activeCLass}/>
+       </>
+     )
+ }
+  
+  
 
 
 

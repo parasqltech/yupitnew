@@ -92,7 +92,7 @@ class SubHeader extends React.Component {
                                 </>
                                 }}
                            </Location> */}
-                           Page Name
+                           Page Name 1
                         </span>
                     </div>
                     <Navbar className="pt-md-0 pt-3" id="help">

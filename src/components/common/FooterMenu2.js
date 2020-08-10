@@ -22,42 +22,11 @@ const FooterMenu2 = () => (
       `}
       render={data => (
           <ul className="footer-menu">
-            {data &&
-              data.allWordpressWpApiMenusMenusItems &&
-              data.allWordpressWpApiMenusMenusItems.edges &&
-              data.allWordpressWpApiMenusMenusItems.edges[0] &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node.items &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
-                (prop,i) => {
-                  return (
-                    <>
-                    {(i < 1)?(<><li><Link to={'/'+prop.object_slug} dangerouslySetInnerHTML={{ __html: prop.title}}></Link></li></>):(<></>)}
-                
-                    </>
-                  )
-                }
-              )}
-     
-     
-              <li><Link to={"/help"} >FAQs</Link></li>
-              
-              {data &&
-              data.allWordpressWpApiMenusMenusItems &&
-              data.allWordpressWpApiMenusMenusItems.edges &&
-              data.allWordpressWpApiMenusMenusItems.edges[0] &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node.items &&
-              data.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
-                (prop,i) => {
-                  return (
-                    <>
-                    {(i > 1)?(<><li><Link to={'/'+prop.object_slug} dangerouslySetInnerHTML={{ __html: prop.title}}></Link></li></>):(<></>)}
-                
-                    </>
-                  )
-                }
-              )}
+              <li><Link to={"/help"}  state={{ activeCLass: "CustomerSupport" }} >Customer support</Link></li>
+              <li><Link to={"/help"}  state={{ activeCLass: "Faq" }} >FAQs</Link></li>
+              <li><Link to={"/help"}  state={{ activeCLass: "ContactUs" }} >Contact US</Link></li>
+              <li><Link to={"/terms-and-conditions"}   >Terms and Conditions</Link></li>
+              <li><Link to={"/privacy-policy"} >Privacy Policy</Link></li>
         </ul>
       )}
       />
