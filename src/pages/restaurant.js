@@ -197,7 +197,7 @@ if (this.validator.allValid()) {
                                                      <span className="popoverIconMain"><img src={resturantSpecialIcon2} className="img-fluid"/></span>
                                                      <div className="popoverBox">
                                                         <p className="popoverTitle mb-2">Time</p>
-                                                        <p><span>{prop.AllData[0].Todaytime}</span></p>
+                                                        <p><span>(prop.AllData[0].Todaytime === '')?<span>Closed now</span>:{prop.AllData[0].Todaytime}</span></p>
                                                         
                                                      </div>
                                                   </li>
