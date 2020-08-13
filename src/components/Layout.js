@@ -32,10 +32,10 @@ const Layout = ({ children}) => (
             {({ location }) => {
             
               return <>
-              {((location.pathname === "/faq")||(location.pathname === "/terms-and-conditions")||(location.pathname === "/privacy-policy")) ? (<SubHeader/>) :(<Header/>)}
-              </>
-            }}
-    </Location>
+                {((location.pathname === "/faq")||(location.pathname === "/terms-and-conditions")||(location.pathname === "/privacy-policy")) ? (<SubHeader/>) :(<Header/>)}
+                </>
+              }}
+      </Location>
     <>{children} </>
     <Footer></Footer>
 	<ScrollUpButton />

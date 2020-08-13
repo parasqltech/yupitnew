@@ -273,7 +273,8 @@ if (this.validator.allValid()) {
                                                </span>
                                             )})
                                         } 
-                                    <button type="submit" name="sidebarsearch" className="btn btn-default " variant="default">Search</button> 
+                                        <div>
+                                    <button type="submit" name="sidebarsearch" className="btn btn-default btn-block" variant="default">Search</button></div> 
                                     {this.validator.message('sidebarsearch', this.state.sidebarsearch, 'required')}
                                     </div>		
 									
