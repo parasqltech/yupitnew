@@ -4324,6 +4324,9 @@ section.restaurent-section-1{
     }
     .form-control{
       min-width: 316px;
+      @media all and (max-width:767px) {
+        min-width: 100%;
+      }
     }
   }
   &::before{
