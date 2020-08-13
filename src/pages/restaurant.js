@@ -148,7 +148,7 @@ if (this.validator.allValid()) {
                                 <h1 className="section-heading font-weight-bold  mb-3">Delicious!!</h1>
                                 <p className="section-heading-3 mb-3">Find your favourite venue anytime, Anywhere</p>
                                 <Form onSubmit={this.handleSubmit}>
-                                    <div className="d-flex ">
+                                    <div className="d-flex justify-content-center">
                                       <div className="mr-3">
                                       <input type="text" rows="2" name="headersearch" className="form-control " onChange={this.handleInputChange} placeholder="Search restaurants or dishes"/>
                                     
@@ -173,9 +173,9 @@ if (this.validator.allValid()) {
                                 <>
                                     { res && res.map(prop => {return (  
                                       <>  
-                                          <Col  xl={4}  lg={4} md="4"  sm={6}>
-                                             <Link className="nav-link p-0" to={"/restaurant/"+prop.URL}>
-                                             <Card className="resturant-card p-2 ">
+                                          <Col  className="mb-4" xl={4}  lg={4} md="4"  sm={6}>
+                                             <Link className="nav-link p-0 h-100 " to={"/restaurant/"+prop.URL}>
+                                             <Card className="resturant-card p-2 h-100">
                                              <Card.Header className="p-0 border-0">
                                                <div className="resturant-card-image">
                                                 <img src={prop.ImageURL} className="img-fluid" alt=""/>

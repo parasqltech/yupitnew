@@ -47,10 +47,10 @@ class RestaurantMenu extends Component {
             <Container className="mh-100  d-flex align-items-end  ">
                     <Row className="justify-content-between w-100  ">
                         <Col xl={8} lg={10}>
-                            <div className="restuarant-top-detail">
+                            <div className="restuarant-top-detail d-flex">
                                 <div className="restaurant-logo">
                                     <img src={BintangxCafe} className="img-fluid" alt=""/>
-                                    </div>
+                                </div>
                                 <div className="restaurant-details">
                                     <h1 className="restaurant-name section-heading-3 font-weight-semi-bold mb-2 text-white">Bintang Cafe</h1>
                                     <p className="label-text text-white mb-2">Burgers, American, Sandwiches, Fast Food, BBQ..</p>

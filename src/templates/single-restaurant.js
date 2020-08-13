@@ -177,11 +177,18 @@ class RestaurantDetailPage extends Component {
 					                    <Card className="offer-card p-0">
 					                    <Card.Header className="p-0">
 					                        <img src={restaurantData.ImageURL} className="img-fluid w-100" alt/>
+                                           
 					                        <div className="offerHeader Getmealwithdrink">
+                                            <div className="offerIcon">
+                                                    <i>
+                                                    <img src={restaurantData.LogoURL} className="img-fluid" alt/>
+                                                    </i>
+                                                </div>
 					                            <div className="offerName">
 					                            {prop.OfferTitle}
 					                            </div>
 					                        </div>
+
 					                    </Card.Header>
 					                    <Card.Body className="p-0">
 					                        <p className="offerDetailText">{prop.OfferName}</p>
@@ -279,7 +286,7 @@ class RestaurantDetailPage extends Component {
                                        </Col>
                                        <Col md={6} sm={7}>
                                        <Row>
-                                       <Col xl={8} lg={10}>
+                                       <Col xl={10} lg={10}>
                                             <h3 className="section-heading-3 font-weight-semi-bold">Opening Hours</h3>
                                             <ul className="WorkingHourList">
                                                 <li className="d-flex">
@@ -385,7 +392,7 @@ class RestaurantDetailPage extends Component {
                                               <input type="hidden" name="RID" onChange={this.setID} value={restaurantData.RestaurantID} />
                                               </span>
                                               <Col lg={12} className="mb-3">
-                                                  <FormControl as="textarea" placeholder="Message" onChange={this.setMsg}  rows="2" >{this.state.ReviewText}</FormControl>
+                                                  <FormControl as="textarea" placeholder="Message" onChange={this.setMsg}  rows="3" >{this.state.ReviewText}</FormControl>
                                               </Col>
                                               <Col lg={12} className="mb-3">
                                                   <Button variant="default" onClick={this.submitForm} as="submit">Submit</Button>
