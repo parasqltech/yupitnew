@@ -137,7 +137,7 @@ class RestaurantDetailPage extends Component {
     <section className="restaurent-menu-section-1">
         <Container className="mh-100  d-flex align-items-end  ">
             <Row className="justify-content-between w-100  ">
-                <Col xl={8} lg={10}>
+                <Col xl={12} lg={12}>
                     <div className="restuarant-top-detail">
                         <div className="restaurant-logo">
                             <img src={restaurantData.LogoURL} className="img-fluid" alt=""/>
