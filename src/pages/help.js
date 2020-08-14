@@ -20,7 +20,6 @@ import { Tab, Col, Nav, Row, Card, Accordion, Button } from  'react-bootstrap';
 
 
 
-
 class Help1 extends React.Component {
     
 constructor(props) {
@@ -44,14 +43,15 @@ this.setState({
 }
 componentDidMount() {
     this.setState({
-        tabactiveClass:this.props.activeClass.state.activeClass,
+        tabactiveClass:this.props.activeCLass,
     })
+    console.log("Active CLass ===="+ this.props.activeCLass);
 }
 
 componentDidUpdate(prevProps, prevState) {
-    if (prevProps.activeClass !== this.props.activeClass) {
+    if (prevProps.activeCLass !== this.props.activeCLass) {
         this.setState({
-            tabactiveClass:this.props.activeClass.state.activeClass,
+            tabactiveClass:this.props.activeCLass,
         })
     }
 }
@@ -131,11 +131,11 @@ return(
 
 
  const Help = ({ location }) => {
-  
+    const D1 = location.state.activeCLass;
     return  (
        <>
-       
-        <Help1  activeClass={location}/>
+        
+        <Help1  activeCLass={D1}/>
        </>
      )
  }
