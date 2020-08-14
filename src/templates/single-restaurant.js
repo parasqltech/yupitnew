@@ -141,7 +141,7 @@ class RestaurantDetailPage extends Component {
                     <div className="restuarant-top-detail">
                         <div className="restaurant-logo">
                             <img src={restaurantData.LogoURL} className="img-fluid" alt=""/>
-                            </div>
+                        </div>
                         <div className="restaurant-details">
                             <h1 className="restaurant-name section-heading-3 font-weight-semi-bold mb-2 text-white">{restaurantData.Name}</h1>
                             <p className="label-text text-white mb-2">{restaurantData.AllData[0].FoodDescription}</p>

@@ -4681,7 +4681,7 @@ section.restaurent-menu-section-1{
       .restaurant-logo{
         width: 100px;
         height: 100px;
-        display: inline-flex;
+        display: inline-block;
         border: 4px solid $white-color; 
         vertical-align: middle;
         @media all and (max-width:767px){
@@ -4696,6 +4696,7 @@ section.restaurent-menu-section-1{
         display: inline-block;
         vertical-align: middle;
         padding-left: 30px;
+        width: calc(100% - 130px);
         @media all and (max-width:767px){
           width: calc(100% - 130px);
         }
