@@ -289,39 +289,39 @@ class RestaurantDetailPage extends Component {
                                        <Col xl={10} lg={10}>
                                             <h3 className="section-heading-3 font-weight-semi-bold">Opening Hours</h3>
                                             <ul className="WorkingHourList">
-                                                <li className="d-flex">
+                                                <li className="">
 
                                                    <span>Monday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Monday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Monday)?(restaurantData.AllData[0].Timings.Monday):"Closed"}</span>
                                                 </li>
                                                 <li>
                                                    <span>Tuesday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Tuesday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Tuesday)?(restaurantData.AllData[0].Timings.Tuesday):"Closed"}</span>
                                                     
                                                 </li>
                                                 <li>
                                                    <span>Wednesday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Wednesday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Wednesday)?(restaurantData.AllData[0].Timings.Wednesday):"Closed"}</span>
                                                     
                                                 </li>
                                                 <li>
                                                    <span>Thursday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Thursday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Thursday)?(restaurantData.AllData[0].Timings.Thursday):"Closed"}</span>
                                                     
                                                 </li>
                                                 <li>
                                                    <span>Friday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Friday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Friday)?(restaurantData.AllData[0].Timings.Friday):"Closed"}</span>
                                                     
                                                 </li>
                                                 <li>
                                                    <span>Saturday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Saturday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Saturday)?(restaurantData.AllData[0].Timings.Saturday):"Closed"}</span>
                                                     
                                                 </li>
                                                 <li>
                                                    <span>Sunday</span>
-                                                   <span>{restaurantData.AllData[0].Timings.Sunday}</span>
+                                                   <span>: {(restaurantData.AllData[0].Timings.Sunday)?(restaurantData.AllData[0].Timings.Sunday):"Closed"}</span>
                                                 </li>
                                             </ul>
                                         </Col>

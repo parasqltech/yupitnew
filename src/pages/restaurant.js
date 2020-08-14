@@ -179,6 +179,7 @@ if (this.validator.allValid()) {
                                              <Card.Header className="p-0 border-0">
                                                <div className="resturant-card-image">
                                                 <img src={prop.ImageURL} className="img-fluid" alt=""/>
+                                                <span className="resturant-price-range text-white">$15 - $20</span>
                                                </div>
                                                <div className="resturant-logo">
                                                 <img className="img-fluid"  src={prop.LogoURL}/>
