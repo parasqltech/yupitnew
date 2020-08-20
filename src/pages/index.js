@@ -85,10 +85,8 @@ const MainPage = () => (
                         </div>
                     </div>
                 </div>
-            </section>
-            
-                <ReferAFriendSection></ReferAFriendSection>
-           
+            </section>            
+            <ReferAFriendSection></ReferAFriendSection>           
             <HomeBlog></HomeBlog>
             
             <section className="home-section-7 pt-4">
