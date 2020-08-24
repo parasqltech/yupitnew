@@ -27,6 +27,7 @@ render() {
   return(
     <>
       <section className="career-section-3 mt-0 mb-4">
+        <h2 className="section-heading font-weight-semi-bold mb-4 text-center mb-1">Gilmpses of life at YupiT</h2>
       <LightgalleryProvider lightgallerySettings={{ mode: 'lg-fade',download:false,
                                               cssEasing : 'cubic-bezier(0.25, 0, 0.25, 1)' }}
                                               galleryClassName="my_custom_classname"
